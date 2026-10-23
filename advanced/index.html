@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#17133f">
+<title>بطاقة المستوى المتقدم | أكاديمية وصاب</title>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;padding:20px;background:radial-gradient(circle at 20% 10%,#40306f,transparent 35%),linear-gradient(135deg,#0d1028,#21184c 55%,#39205f);font-family:Tahoma,Arial,sans-serif;color:#fff}.wrap{width:min(620px,96%);text-align:center}.brand{color:#ffd96a;font-weight:bold;font-size:14px}.tag{display:inline-block;margin:12px 0;padding:7px 14px;border:1px solid #ffffff35;border-radius:30px;background:#ffffff10}.card{margin-top:20px;min-height:360px;padding:35px 25px;border-radius:28px;background:linear-gradient(145deg,#ffffff,#f1edff);color:#211a45;box-shadow:0 25px 70px #0008;display:flex;flex-direction:column;justify-content:center;align-items:center;cursor:pointer}.level{font-size:13px;color:#7654c6;font-weight:bold}.word{direction:ltr;font-size:clamp(38px,9vw,64px);font-weight:900;margin:18px 0;color:#302080}.meaning{font-size:22px;font-weight:bold;color:#5c377f}.example{direction:ltr;margin-top:18px;font-size:17px;line-height:1.8;color:#47516d}.hint{margin-top:18px;color:#858aa0;font-size:13px}.hidden{display:none}.btn{margin-top:18px;border:0;border-radius:14px;padding:13px 20px;font:inherit;font-weight:bold;cursor:pointer;background:#ffd447;color:#3d3000;box-shadow:0 4px 0 #d3a900}.back{display:inline-block;margin-top:16px;color:#fff;text-decoration:none;font-size:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="brand">أكاديمية وصاب لإتقان اللغة الإنجليزية</div>
+<div class="tag">🔥 المستوى المتقدم · Advanced</div>
+<div class="card" id="card" aria-label="بطاقة مفردة للمستوى المتقدم">
+<div class="level">ADVANCED VOCABULARY</div>
+<div class="word">Nevertheless</div>
+<div class="meaning hidden" id="meaning">مع ذلك / رغم ذلك</div>
+<div class="example hidden" id="example">The task was difficult; nevertheless, she completed it successfully.</div>
+<div class="hint" id="hint">اضغط على البطاقة لإظهار المعنى والمثال ✨</div>
+</div>
+<button class="btn" id="speak">🔊 استمع إلى النطق</button>
+<a class="back" href="../">← العودة إلى البطاقات الرئيسية</a>
+</div>
+<script>
+const card=document.getElementById('card'),meaning=document.getElementById('meaning'),example=document.getElementById('example'),hint=document.getElementById('hint');
+card.onclick=()=>{meaning.classList.toggle('hidden');example.classList.toggle('hidden');hint.textContent=meaning.classList.contains('hidden')?'اضغط على البطاقة لإظهار المعنى والمثال ✨':'ممتاز! حاول استخدام الكلمة في جملة من إنشائك 💪'};
+document.getElementById('speak').onclick=()=>{const u=new SpeechSynthesisUtterance('Nevertheless');u.lang='en-US';u.rate=.8;speechSynthesis.cancel();speechSynthesis.speak(u)};
+</script>
+</body>
+</html>
