@@ -2,24 +2,22 @@
 
 موقع بطاقات تعليمية تفاعلية باللغة الإنجليزية لصالح **أكاديمية وصاب لإتقان اللغة الإنجليزية**.
 
-## البطاقة الرئيسية
+## البطاقة الحالية
 - المستوى: A1 (مبتدئ)
+- الموضوع: Greetings & Introductions — التحيات والتعارف
 - 10 كلمات وعبارات مع ترجمتها العربية
-- نطق إنجليزي عبر Speech Synthesis
-- اختبار تفاعلي مع تصحيح فوري
-- تصميم متجاوب مع الهواتف
+- نطق إنجليزي عبر ميزة Speech Synthesis في المتصفح
+- اختبار من 10 أسئلة مع تصحيح فوري ونتيجة نهائية
+- تصميم متجاوب مع الهواتف، ولا يحتاج إلى مكتبات خارجية
 
-## الصفحات المستقلة
-- **تحدث معي:** `conversation/index.html`
-- **بطاقة المستوى المتقدم:** `advanced/index.html`
+## تشغيل البطاقة
+افتح ملف `index.html` في المتصفح، أو فعّل GitHub Pages للمستودع من:
+**Settings → Pages → Build and deployment → Deploy from a branch → main → /(root) → Save**
 
-بعد نشر GitHub Pages، تكون الروابط:
-- الموقع الرئيسي: `https://mdrstalnwr33-beep.github.io/Alqadi-Interactive-Cards/`
-- تحدث معي: `https://mdrstalnwr33-beep.github.io/Alqadi-Interactive-Cards/conversation/`
-- المستوى المتقدم: `https://mdrstalnwr33-beep.github.io/Alqadi-Interactive-Cards/advanced/`
+بعد اكتمال النشر، سيكون رابط الموقع عادةً:
+`https://mdrstalnwr33-beep.github.io/Alqadi-Interactive-Cards./`
 
-## ملاحظة النشر
-المستودع الحالي اسمه `Alqadi-Interactive-Cards`، وليس الاسم القديم المنتهي بنقطة. إذا كان GitHub Pages مضبوطًا على النشر من فرع `main`، فكل ملف HTML داخل المستودع يُنشر ضمن نفس المسار.
+إذا لم يقبل GitHub اسم المستودع المنتهي بنقطة في رابط Pages، غيّر اسم المستودع إلى `Alqadi-Interactive-Cards` من **Settings → General → Repository name**، ثم استخدم الرابط الذي يعرضه GitHub في صفحة Pages.
 
 ## تحديث المحتوى
-يمكن تحديث البطاقات والصفحات بإضافة أو تعديل ملفات الموقع داخل هذا المستودع دون الحاجة إلى إعادة بناء تطبيق الأكاديمية.
+تُحدّث البطاقات بتعديل ملفات الموقع داخل هذا المستودع، دون الحاجة إلى إعادة بناء تطبيق الأكاديمية، ما دام التطبيق يفتح رابط البطاقة المنشور.
