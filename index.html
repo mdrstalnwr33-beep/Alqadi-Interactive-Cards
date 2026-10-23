@@ -1,90 +1,77 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#123b68">
-<title>بطاقة التحيات والتعارف | أكاديمية وصاب</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#142d72">
+<title>بطاقات وصاب المرحة | التحيات والتعارف</title>
 <style>
-:root{--navy:#123b68;--blue:#1769aa;--gold:#ffca58;--paper:#fff;--ink:#18324b;--muted:#62758a;--good:#18794e;--bad:#b42318}
-*{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:linear-gradient(145deg,#eaf5ff,#fff8e6);color:var(--ink);min-height:100vh}
-header{background:linear-gradient(120deg,#123b68,#1769aa);color:white;padding:28px 16px 34px;text-align:center;border-radius:0 0 28px 28px}
-.brand{font-weight:bold;color:var(--gold);font-size:14px;letter-spacing:.3px}.tag{display:inline-block;background:#ffffff20;border:1px solid #ffffff55;padding:6px 13px;border-radius:99px;margin-top:12px;font-size:13px}
-h1{margin:12px 0 8px;font-size:clamp(25px,5vw,36px)}header p{margin:0;color:#e4f1ff}
-main{width:min(900px,94%);margin:22px auto 44px}.panel{background:var(--paper);border-radius:20px;padding:20px;margin:16px 0;box-shadow:0 8px 28px #153a5c12;border:1px solid #dce9f5}
-h2{margin:0 0 15px;color:var(--navy);font-size:22px}.hint{color:var(--muted);font-size:14px;line-height:1.7}
-.words{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
-.word{border:1px solid #dce9f5;border-radius:15px;padding:14px;display:flex;align-items:center;justify-content:space-between;gap:10px;background:#fbfdff}
-.eng{direction:ltr;text-align:left;font-weight:bold;font-size:18px;color:var(--navy)}.ar{color:var(--muted);font-size:14px;margin-top:5px}
-button{font:inherit;cursor:pointer;border:0;border-radius:12px;padding:10px 14px;background:var(--blue);color:white;font-weight:bold;transition:transform .12s,opacity .12s}button:active{transform:scale(.97)}button.secondary{background:#e9f2fb;color:var(--navy)}button.gold{background:var(--gold);color:#493300}.speak{white-space:nowrap;padding:9px 11px}
-.quiztop{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}.progress{height:8px;background:#e8eef5;border-radius:20px;overflow:hidden;margin:14px 0}.progress div{height:100%;background:var(--gold);width:0;transition:width .2s}
-.question{font-size:21px;font-weight:bold;margin:18px 0}.options{display:grid;gap:10px}.option{background:#f4f8fc;color:var(--ink);border:1px solid #dce9f5;text-align:right;padding:13px 15px}.option:hover{border-color:var(--blue)}.option.correct{background:#e5f7ed;border-color:#79c99d;color:#125b39}.option.wrong{background:#fff0ee;border-color:#e9a09a;color:#8c1c14}.feedback{min-height:28px;margin:12px 0;font-weight:bold}.feedback.good{color:var(--good)}.feedback.bad{color:var(--bad)}.quizactions{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}.result{text-align:center;padding:18px}.score{font-size:42px;font-weight:bold;color:var(--blue)}footer{text-align:center;color:var(--muted);font-size:13px;padding:8px 15px 28px}
-@media(max-width:480px){.panel{padding:15px}.word{padding:12px}.eng{font-size:17px}}
+:root{--blue:#3158d8;--purple:#713cc8;--gold:#ffd447;--ink:#1b2850;--muted:#65718b;--green:#16804a;--red:#bd3030}
+*{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;color:var(--ink);background:radial-gradient(circle at 10% 5%,#fff1a8 0,transparent 25%),linear-gradient(135deg,#eef6ff,#f6edff 55%,#fff8e7);min-height:100vh}
+header{position:relative;overflow:hidden;text-align:center;color:white;padding:30px 15px 35px;background:linear-gradient(120deg,#142d72,#3158d8 55%,#713cc8);border-radius:0 0 32px 32px}
+header:before,header:after{content:"✦";position:absolute;color:#ffdf62;font-size:45px;opacity:.8}header:before{left:8%;top:12px}header:after{right:9%;bottom:10px}
+.brand{color:#ffe36c;font-size:14px;font-weight:bold}h1{font-size:clamp(27px,5vw,40px);margin:12px 0 6px}header p{margin:0;color:#e9edff}.pill{display:inline-block;margin-top:13px;padding:7px 15px;border-radius:30px;background:#ffffff20;border:1px solid #ffffff55}
+main{width:min(950px,94%);margin:20px auto 45px}.panel{background:#ffffffed;border:1px solid #e1e7fa;border-radius:23px;padding:20px;margin:16px 0;box-shadow:0 12px 30px #243c7c12}
+h2{color:#253e99;margin:0 0 10px;font-size:22px}.hint{color:var(--muted);font-size:14px;line-height:1.8}.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+button{font:inherit;font-weight:bold;border:0;border-radius:13px;padding:11px 15px;background:var(--blue);color:white;cursor:pointer;box-shadow:0 4px 0 #203fa7;transition:transform .12s}button:active{transform:translateY(3px);box-shadow:0 1px 0 #203fa7}button:disabled{opacity:.45;cursor:not-allowed}button.light{background:#edf1ff;color:#2b3c8a;box-shadow:0 4px 0 #d3dbff}button.gold{background:var(--gold);color:#493800;box-shadow:0 4px 0 #d7a900}
+.deck{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:13px;margin-top:16px}
+.flash{min-height:145px;border:2px solid #e0e7ff;border-radius:19px;padding:15px;background:linear-gradient(145deg,#fff,#f5f7ff);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;cursor:pointer;transition:transform .2s,border-color .2s;position:relative;overflow:hidden}
+.flash:hover{transform:translateY(-3px);border-color:#8da3ff}.flash .emoji{font-size:25px}.flash .english{direction:ltr;font-size:24px;font-weight:900;color:#243e9a;margin:7px 0}.flash .meaning{font-size:17px;color:#5a367f;font-weight:bold}.flash .tap{font-size:12px;color:#7c86a5;margin-top:10px}.flash .speaker{position:absolute;left:8px;top:8px;padding:7px 9px;border-radius:10px;font-size:12px;box-shadow:none}
+.quizhead{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.stats{display:flex;gap:8px;flex-wrap:wrap}.stat{background:#f0f3ff;border-radius:30px;padding:8px 12px;font-weight:bold;font-size:14px}.progress{height:11px;background:#e7eaff;border-radius:20px;overflow:hidden;margin:15px 0}.progress>div{height:100%;width:0;background:linear-gradient(90deg,#ffd447,#ff9e47,#a777ff);transition:width .25s}
+.question{font-size:clamp(20px,4vw,26px);font-weight:900;text-align:center;margin:23px 0}.options{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:11px}.option{background:#f5f6ff;color:var(--ink);box-shadow:0 4px 0 #dce2fb;border:2px solid #e2e7ff;min-height:55px}.option:hover{border-color:#899dff}.option.correct{background:#dff8e8;color:#116439;border-color:#66ce91;box-shadow:0 4px 0 #8bd7a9}.option.wrong{background:#fff0ef;color:#a12626;border-color:#efaaa4;box-shadow:0 4px 0 #efaaa4}
+.feedback{text-align:center;min-height:44px;margin:15px 0;font-weight:900;font-size:18px}.feedback.good{color:var(--green)}.feedback.bad{color:var(--red)}.actions{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}.result{text-align:center;padding:18px}.bigscore{font-size:50px;color:#3158d8;font-weight:900}.stars{font-size:35px;letter-spacing:5px}.hidden{display:none!important}footer{text-align:center;color:#697591;padding:10px 16px 30px;font-size:13px}
+#celebration{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:20}.confetti{position:absolute;top:-20px;width:10px;height:15px;animation:fall 2.5s linear forwards}@keyframes fall{to{transform:translateY(110vh) rotate(800deg);opacity:.15}}.pop{animation:pop .45s ease}@keyframes pop{50%{transform:scale(1.07)}}
+@media(max-width:500px){.panel{padding:15px}.flash{min-height:125px}.options{grid-template-columns:1fr}.actions button{flex:1}}
 </style>
 </head>
 <body>
-<header>
-<div class="brand">أكاديمية وصاب لإتقان اللغة الإنجليزية</div>
-<h1>بطاقة التحيات والتعارف</h1>
-<p>Greetings &amp; Introductions</p>
-<div class="tag">المستوى المبتدئ · A1</div>
-</header>
+<div id="celebration" aria-hidden="true"></div>
+<header><div class="brand">أكاديمية وصاب لإتقان اللغة الإنجليزية</div><h1>🎉 تعلّم والعب واربح النجوم!</h1><p>بطاقات التحيات والتعارف · Greetings & Introductions</p><div class="pill">⭐ المستوى المبتدئ A1 ⭐</div></header>
 <main>
 <section class="panel">
-<h2>📘 تعلّم الكلمات</h2>
-<p class="hint">اقرأ الكلمة الإنجليزية ومعناها، ثم اضغط زر 🔊 للاستماع إلى النطق. قد تختلف جودة الصوت بحسب المتصفح والجهاز.</p>
-<div class="words" id="words"></div>
+<div class="toolbar"><div><h2>🃏 بطاقات سحرية</h2><div class="hint">اضغط على البطاقة لإظهار معناها، أو اضغط 🔊 لتسمع نطقها. تعلّم 10 عبارات ثم تحدَّ نفسك!</div></div><button class="light" id="soundToggle">🔊 المؤثرات: تعمل</button></div>
+<div class="deck" id="deck"></div>
 </section>
-<section class="panel" id="quizPanel">
-<div class="quiztop"><h2>🎯 اختبر نفسك</h2><span class="hint" id="counter">السؤال 1 من 10</span></div>
-<div class="progress"><div id="progress"></div></div>
-<div id="quiz">
-<div class="question" id="question"></div>
-<div class="options" id="options"></div>
-<div class="feedback" id="feedback" aria-live="polite"></div>
-<div class="quizactions"><button class="secondary" id="restart">إعادة الاختبار</button><button id="next" disabled>السؤال التالي ←</button></div>
-</div>
-<div class="result" id="result" hidden></div>
+<section class="panel" id="game">
+<div class="quizhead"><h2>🏆 تحدّي الأبطال</h2><div class="stats"><span class="stat" id="counter">السؤال 1/10</span><span class="stat" id="score">⭐ 0</span><span class="stat" id="streak">🔥 سلسلة 0</span></div></div>
+<div class="progress"><div id="bar"></div></div>
+<div id="quiz"><div class="question" id="question"></div><div class="options" id="options"></div><div class="feedback" id="feedback" aria-live="polite"></div><div class="actions"><button class="light" id="restart">🔄 ابدأ من جديد</button><button id="next" disabled>التالي 🚀</button></div></div>
+<div class="result hidden" id="result"></div>
 </section>
 </main>
-<footer>التعلّم خطوة بخطوة — أكاديمية وصاب لإتقان اللغة الإنجليزية</footer>
+<footer>👏 كل محاولة تقرّبك من النجاح — أكاديمية وصاب لإتقان اللغة الإنجليزية</footer>
 <script>
 const words=[
-{en:"Hello",ar:"مرحباً",say:"هَلّو"},
-{en:"Hi",ar:"أهلاً",say:"هاي"},
-{en:"Good morning",ar:"صباح الخير",say:"غود مورنينغ"},
-{en:"Good afternoon",ar:"طاب يومك (بعد الظهر)",say:"غود آفترنون"},
-{en:"Good evening",ar:"مساء الخير",say:"غود إيفنينغ"},
-{en:"Goodbye",ar:"إلى اللقاء",say:"غودباي"},
-{en:"Please",ar:"من فضلك",say:"بليز"},
-{en:"Thank you",ar:"شكراً لك",say:"ثانك يو"},
-{en:"My name is",ar:"اسمي هو",say:"ماي نيم إز"},
-{en:"Nice to meet you",ar:"سعيد بلقائك",say:"نايس تو ميت يو"}
+{en:"Hello",ar:"مرحباً",emoji:"👋"},{en:"Hi",ar:"أهلاً",emoji:"😄"},{en:"Good morning",ar:"صباح الخير",emoji:"🌞"},{en:"Good afternoon",ar:"طاب يومك (بعد الظهر)",emoji:"🌤️"},{en:"Good evening",ar:"مساء الخير",emoji:"🌆"},{en:"Goodbye",ar:"إلى اللقاء",emoji:"👋"},{en:"Please",ar:"من فضلك",emoji:"🙏"},{en:"Thank you",ar:"شكراً لك",emoji:"💛"},{en:"My name is",ar:"اسمي هو",emoji:"🙋"},{en:"Nice to meet you",ar:"سعيد بلقائك",emoji:"🤝"}
 ];
-const wordRoot=document.getElementById('words');
-function speak(text){if(!('speechSynthesis' in window)){alert('عذراً، النطق الصوتي غير مدعوم في هذا المتصفح.');return}window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='en-US';u.rate=.82;window.speechSynthesis.speak(u)}
-words.forEach(w=>{const el=document.createElement('div');el.className='word';el.innerHTML='<div><div class="eng"></div><div class="ar"></div></div><button class="secondary speak" type="button" aria-label="استمع إلى '+w.en+'">🔊 استمع</button>';el.querySelector('.eng').textContent=w.en;el.querySelector('.ar').textContent=w.ar;el.querySelector('button').addEventListener('click',()=>speak(w.en));wordRoot.appendChild(el)});
+let soundOn=true, audioCtx=null;
+function tone(freq,duration,delay=0,type='sine',gain=.09){if(!soundOn)return;try{audioCtx=audioCtx||new(window.AudioContext||window.webkitAudioContext)();const o=audioCtx.createOscillator(),g=audioCtx.createGain();o.type=type;o.frequency.value=freq;g.gain.setValueAtTime(gain,audioCtx.currentTime+delay);g.gain.exponentialRampToValueAtTime(.001,audioCtx.currentTime+delay+duration);o.connect(g);g.connect(audioCtx.destination);o.start(audioCtx.currentTime+delay);o.stop(audioCtx.currentTime+delay+duration)}catch(e){}}
+function cheer(){if(!soundOn)return;tone(523,.18,0,'triangle');tone(659,.18,.13,'triangle');tone(784,.25,.26,'triangle');tone(1046,.35,.43,'triangle');setTimeout(()=>{if(soundOn){tone(740,.12,0,'square',.035);tone(880,.12,.12,'square',.035);tone(740,.12,.24,'square',.035)}},180)}
+function boo(){tone(220,.18,0,'triangle',.05);tone(165,.25,.12,'triangle',.04)}
+function speak(text){if(!('speechSynthesis'in window)){alert('النطق غير مدعوم في هذا المتصفح.');return}window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='en-US';u.rate=.82;window.speechSynthesis.speak(u)}
+const deck=document.getElementById('deck');
+words.forEach(w=>{const card=document.createElement('div');card.className='flash';card.innerHTML='<span class="emoji">'+w.emoji+'</span><div class="english"></div><div class="meaning hidden"></div><div class="tap">اضغط لاكتشاف المعنى ✨</div><button class="speaker light" type="button">🔊</button>';card.querySelector('.english').textContent=w.en;card.querySelector('.meaning').textContent=w.ar;card.addEventListener('click',e=>{if(e.target.closest('button'))return;const m=card.querySelector('.meaning');m.classList.toggle('hidden');card.querySelector('.tap').textContent=m.classList.contains('hidden')?'اضغط لاكتشاف المعنى ✨':'رائع! كرر العبارة بصوتك 💪';card.classList.toggle('pop');setTimeout(()=>card.classList.remove('pop'),450);tone(620,.1)});card.querySelector('button').addEventListener('click',e=>{e.stopPropagation();speak(w.en)});deck.appendChild(card)});
 const questions=[
 {q:'ما معنى “Hello”؟',opts:['إلى اللقاء','مرحباً','شكراً','من فضلك'],a:1},
-{q:'كيف تقول “صباح الخير” بالإنجليزية؟',opts:['Good evening','Goodbye','Good morning','Good afternoon'],a:2},
-{q:'ما معنى “Thank you”؟',opts:['شكراً لك','اسمي هو','أهلاً','مساء الخير'],a:0},
-{q:'اختر العبارة التي تعني “إلى اللقاء”.',opts:['Please','Hello','Nice to meet you','Goodbye'],a:3},
+{q:'كيف تقول “صباح الخير”؟',opts:['Good evening','Goodbye','Good morning','Good afternoon'],a:2},
+{q:'“Thank you” تعني…',opts:['شكراً لك','اسمي هو','أهلاً','مساء الخير'],a:0},
+{q:'اختر عبارة “إلى اللقاء”.',opts:['Please','Hello','Nice to meet you','Goodbye'],a:3},
 {q:'ما معنى “Please”؟',opts:['من فضلك','صباح الخير','مرحباً','سعيد بلقائك'],a:0},
 {q:'كيف تبدأ التعريف باسمك؟',opts:['Goodbye','My name is…','Thank you','Good evening'],a:1},
-{q:'ما معنى “Nice to meet you”؟',opts:['إلى اللقاء','من فضلك','سعيد بلقائك','صباح الخير'],a:2},
+{q:'“Nice to meet you” تعني…',opts:['إلى اللقاء','من فضلك','سعيد بلقائك','صباح الخير'],a:2},
 {q:'أي عبارة مناسبة للتحية في المساء؟',opts:['Good morning','Good evening','Goodbye','Please'],a:1},
-{q:'“Hi” تعني:',opts:['أهلاً','شكراً','اسمي هو','مساء الخير'],a:0},
-{q:'أكمل: “Good _____” (بعد الظهر)',opts:['name','please','afternoon','thank'],a:2}
+{q:'“Hi” تعني…',opts:['أهلاً','شكراً','اسمي هو','مساء الخير'],a:0},
+{q:'أكمل: Good _____ (بعد الظهر)',opts:['name','please','afternoon','thank'],a:2}
 ];
-let order=[],idx=0,score=0,answered=false;
-const qEl=document.getElementById('question'),optsEl=document.getElementById('options'),feedback=document.getElementById('feedback'),next=document.getElementById('next'),counter=document.getElementById('counter'),progress=document.getElementById('progress'),quiz=document.getElementById('quiz'),result=document.getElementById('result');
-function shuffle(arr){return [...arr].sort(()=>Math.random()-.5)}
-function start(){order=shuffle(questions);idx=0;score=0;answered=false;quiz.hidden=false;result.hidden=true;render()}
-function render(){answered=false;const q=order[idx];counter.textContent='السؤال '+(idx+1)+' من '+order.length;progress.style.width=(idx/order.length*100)+'%';qEl.textContent=q.q;optsEl.innerHTML='';feedback.textContent='';feedback.className='feedback';next.disabled=true;next.textContent=idx===order.length-1?'عرض النتيجة':'السؤال التالي ←';q.opts.forEach((o,i)=>{const b=document.createElement('button');b.className='option';b.textContent=o;b.addEventListener('click',()=>answer(i));optsEl.appendChild(b)})}
-function answer(i){if(answered)return;answered=true;const q=order[idx];[...optsEl.children].forEach((b,n)=>{b.disabled=true;if(n===q.a)b.classList.add('correct');if(n===i&&i!==q.a)b.classList.add('wrong')});if(i===q.a){score++;feedback.textContent='أحسنت! إجابة صحيحة ✅';feedback.className='feedback good'}else{feedback.textContent='حاول مرة أخرى في السؤال القادم. الإجابة الصحيحة: '+q.opts[q.a];feedback.className='feedback bad'}next.disabled=false;progress.style.width=((idx+1)/order.length*100)+'%'}
+let order=[],idx=0,score=0,streak=0,answered=false;
+const qEl=document.getElementById('question'),optsEl=document.getElementById('options'),feedback=document.getElementById('feedback'),next=document.getElementById('next'),counter=document.getElementById('counter'),scoreEl=document.getElementById('score'),streakEl=document.getElementById('streak'),bar=document.getElementById('bar'),quiz=document.getElementById('quiz'),result=document.getElementById('result');
+function shuffle(a){return [...a].sort(()=>Math.random()-.5)}
+function start(){order=shuffle(questions);idx=0;score=0;streak=0;answered=false;quiz.classList.remove('hidden');result.classList.add('hidden');render()}
+function render(){answered=false;const q=order[idx];counter.textContent='السؤال '+(idx+1)+'/'+order.length;scoreEl.textContent='⭐ '+score;streakEl.textContent='🔥 سلسلة '+streak;bar.style.width=(idx/order.length*100)+'%';qEl.textContent=q.q;optsEl.innerHTML='';feedback.textContent='';feedback.className='feedback';next.disabled=true;next.textContent=idx===order.length-1?'شاهد نتيجتك 🏆':'التالي 🚀';q.opts.forEach((o,i)=>{const b=document.createElement('button');b.className='option';b.textContent=o;b.addEventListener('click',()=>answer(i));optsEl.appendChild(b)})}
+function answer(i){if(answered)return;answered=true;const q=order[idx];[...optsEl.children].forEach((b,n)=>{b.disabled=true;if(n===q.a)b.classList.add('correct');if(n===i&&i!==q.a)b.classList.add('wrong')});if(i===q.a){score++;streak++;feedback.textContent=['🎉 أحسنت! إجابة صحيحة!','👏 تصفيق للبطل! ممتاز!','🔥 رهيب! واصل التألق!','🌟 أنت نجم اليوم!'][Math.floor(Math.random()*4)];feedback.className='feedback good';cheer();if(streak>=3)confetti(24)}else{streak=0;feedback.textContent='💪 لا تستسلم! الإجابة الصحيحة: '+q.opts[q.a];feedback.className='feedback bad';boo()}scoreEl.textContent='⭐ '+score;streakEl.textContent='🔥 سلسلة '+streak;bar.style.width=((idx+1)/order.length*100)+'%';next.disabled=false}
+function confetti(n=65){const root=document.getElementById('celebration');const colors=['#ffce3a','#7b61ff','#28c88a','#ff6c9c','#36a5ff'];for(let i=0;i<n;i++){const c=document.createElement('i');c.className='confetti';c.style.left=Math.random()*100+'%';c.style.background=colors[Math.floor(Math.random()*colors.length)];c.style.animationDelay=Math.random()*.6+'s';c.style.transform='rotate('+Math.random()*360+'deg)';root.appendChild(c);setTimeout(()=>c.remove(),3300)}}
 next.addEventListener('click',()=>{if(!answered)return;if(idx<order.length-1){idx++;render()}else showResult()});
-function showResult(){quiz.hidden=true;result.hidden=false;result.innerHTML='<div>انتهيت من الاختبار!</div><div class="score">'+score+' / '+order.length+'</div><p>'+(score>=8?'ممتاز! واصل التدرّب يومياً 🌟':score>=5?'جيد! راجع الكلمات وحاول مجدداً 👍':'لا بأس، استمع إلى الكلمات مرة أخرى ثم أعد الاختبار 💪')+'</p><button class="gold" id="again">إعادة الاختبار</button>';document.getElementById('again').addEventListener('click',start)}
-document.getElementById('restart').addEventListener('click',start);start();
+function showResult(){quiz.classList.add('hidden');result.classList.remove('hidden');const pct=score/questions.length;const stars=pct>=.9?'⭐⭐⭐':pct>=.6?'⭐⭐':'⭐';const title=pct>=.9?'أسطورة الإنجليزية! 🏆':pct>=.6?'بطل رائع! 👏':'بداية جميلة! استمر 💪';result.innerHTML='<div class="stars">'+stars+'</div><h2>'+title+'</h2><div class="bigscore">'+score+' / '+questions.length+'</div><p>'+(pct>=.9?'أداء مذهل! تستحق تصفيقاً حاراً! 👏👏👏':pct>=.6?'أحسنت! راجع الكلمات وستصل إلى العلامة الكاملة!':'أنت قادر على الأفضل؛ راجع البطاقات وحاول مرة أخرى!')+'</p><button class="gold" id="again">🎊 ألعب مرة أخرى</button>';if(pct>=.6){cheer();confetti(100)}document.getElementById('again').addEventListener('click',start)}
+document.getElementById('restart').addEventListener('click',start);
+document.getElementById('soundToggle').addEventListener('click',e=>{soundOn=!soundOn;e.currentTarget.textContent=soundOn?'🔊 المؤثرات: تعمل':'🔇 المؤثرات: متوقفة';if(soundOn)tone(660,.12)});
+start();
 </script>
-</body>
-</html>
+</body></html>
