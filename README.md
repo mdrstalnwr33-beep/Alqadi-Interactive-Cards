@@ -17,6 +17,13 @@
 بعد اكتمال النشر، سيكون رابط الموقع عادةً:
 `https://mdrstalnwr33-beep.github.io/Alqadi-Interactive-Cards./`
 
+## المحادثة التفاعلية
+تمت إضافة صفحة **تحدث معي** في:
+`conversation/index.html`
+
+رابطها بعد نشر GitHub Pages:
+`https://mdrstalnwr33-beep.github.io/Alqadi-Interactive-Cards./conversation/`
+
 إذا لم يقبل GitHub اسم المستودع المنتهي بنقطة في رابط Pages، غيّر اسم المستودع إلى `Alqadi-Interactive-Cards` من **Settings → General → Repository name**، ثم استخدم الرابط الذي يعرضه GitHub في صفحة Pages.
 
 ## تحديث المحتوى
