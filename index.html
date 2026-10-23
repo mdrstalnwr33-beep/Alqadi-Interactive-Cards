@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#123b68">
+<title>بطاقة التحيات والتعارف | أكاديمية وصاب</title>
+<style>
+:root{--navy:#123b68;--blue:#1769aa;--gold:#ffca58;--paper:#fff;--ink:#18324b;--muted:#62758a;--good:#18794e;--bad:#b42318}
+*{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:linear-gradient(145deg,#eaf5ff,#fff8e6);color:var(--ink);min-height:100vh}
+header{background:linear-gradient(120deg,#123b68,#1769aa);color:white;padding:28px 16px 34px;text-align:center;border-radius:0 0 28px 28px}
+.brand{font-weight:bold;color:var(--gold);font-size:14px;letter-spacing:.3px}.tag{display:inline-block;background:#ffffff20;border:1px solid #ffffff55;padding:6px 13px;border-radius:99px;margin-top:12px;font-size:13px}
+h1{margin:12px 0 8px;font-size:clamp(25px,5vw,36px)}header p{margin:0;color:#e4f1ff}
+main{width:min(900px,94%);margin:22px auto 44px}.panel{background:var(--paper);border-radius:20px;padding:20px;margin:16px 0;box-shadow:0 8px 28px #153a5c12;border:1px solid #dce9f5}
+h2{margin:0 0 15px;color:var(--navy);font-size:22px}.hint{color:var(--muted);font-size:14px;line-height:1.7}
+.words{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.word{border:1px solid #dce9f5;border-radius:15px;padding:14px;display:flex;align-items:center;justify-content:space-between;gap:10px;background:#fbfdff}
+.eng{direction:ltr;text-align:left;font-weight:bold;font-size:18px;color:var(--navy)}.ar{color:var(--muted);font-size:14px;margin-top:5px}
+button{font:inherit;cursor:pointer;border:0;border-radius:12px;padding:10px 14px;background:var(--blue);color:white;font-weight:bold;transition:transform .12s,opacity .12s}button:active{transform:scale(.97)}button.secondary{background:#e9f2fb;color:var(--navy)}button.gold{background:var(--gold);color:#493300}.speak{white-space:nowrap;padding:9px 11px}
+.quiztop{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}.progress{height:8px;background:#e8eef5;border-radius:20px;overflow:hidden;margin:14px 0}.progress div{height:100%;background:var(--gold);width:0;transition:width .2s}
+.question{font-size:21px;font-weight:bold;margin:18px 0}.options{display:grid;gap:10px}.option{background:#f4f8fc;color:var(--ink);border:1px solid #dce9f5;text-align:right;padding:13px 15px}.option:hover{border-color:var(--blue)}.option.correct{background:#e5f7ed;border-color:#79c99d;color:#125b39}.option.wrong{background:#fff0ee;border-color:#e9a09a;color:#8c1c14}.feedback{min-height:28px;margin:12px 0;font-weight:bold}.feedback.good{color:var(--good)}.feedback.bad{color:var(--bad)}.quizactions{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}.result{text-align:center;padding:18px}.score{font-size:42px;font-weight:bold;color:var(--blue)}footer{text-align:center;color:var(--muted);font-size:13px;padding:8px 15px 28px}
+@media(max-width:480px){.panel{padding:15px}.word{padding:12px}.eng{font-size:17px}}
+</style>
+</head>
+<body>
+<header>
+<div class="brand">أكاديمية وصاب لإتقان اللغة الإنجليزية</div>
+<h1>بطاقة التحيات والتعارف</h1>
+<p>Greetings &amp; Introductions</p>
+<div class="tag">المستوى المبتدئ · A1</div>
+</header>
+<main>
+<section class="panel">
+<h2>📘 تعلّم الكلمات</h2>
+<p class="hint">اقرأ الكلمة الإنجليزية ومعناها، ثم اضغط زر 🔊 للاستماع إلى النطق. قد تختلف جودة الصوت بحسب المتصفح والجهاز.</p>
+<div class="words" id="words"></div>
+</section>
+<section class="panel" id="quizPanel">
+<div class="quiztop"><h2>🎯 اختبر نفسك</h2><span class="hint" id="counter">السؤال 1 من 10</span></div>
+<div class="progress"><div id="progress"></div></div>
+<div id="quiz">
+<div class="question" id="question"></div>
+<div class="options" id="options"></div>
+<div class="feedback" id="feedback" aria-live="polite"></div>
+<div class="quizactions"><button class="secondary" id="restart">إعادة الاختبار</button><button id="next" disabled>السؤال التالي ←</button></div>
+</div>
+<div class="result" id="result" hidden></div>
+</section>
+</main>
+<footer>التعلّم خطوة بخطوة — أكاديمية وصاب لإتقان اللغة الإنجليزية</footer>
+<script>
+const words=[
+{en:"Hello",ar:"مرحباً",say:"هَلّو"},
+{en:"Hi",ar:"أهلاً",say:"هاي"},
+{en:"Good morning",ar:"صباح الخير",say:"غود مورنينغ"},
+{en:"Good afternoon",ar:"طاب يومك (بعد الظهر)",say:"غود آفترنون"},
+{en:"Good evening",ar:"مساء الخير",say:"غود إيفنينغ"},
+{en:"Goodbye",ar:"إلى اللقاء",say:"غودباي"},
+{en:"Please",ar:"من فضلك",say:"بليز"},
+{en:"Thank you",ar:"شكراً لك",say:"ثانك يو"},
+{en:"My name is",ar:"اسمي هو",say:"ماي نيم إز"},
+{en:"Nice to meet you",ar:"سعيد بلقائك",say:"نايس تو ميت يو"}
+];
+const wordRoot=document.getElementById('words');
+function speak(text){if(!('speechSynthesis' in window)){alert('عذراً، النطق الصوتي غير مدعوم في هذا المتصفح.');return}window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='en-US';u.rate=.82;window.speechSynthesis.speak(u)}
+words.forEach(w=>{const el=document.createElement('div');el.className='word';el.innerHTML='<div><div class="eng"></div><div class="ar"></div></div><button class="secondary speak" type="button" aria-label="استمع إلى '+w.en+'">🔊 استمع</button>';el.querySelector('.eng').textContent=w.en;el.querySelector('.ar').textContent=w.ar;el.querySelector('button').addEventListener('click',()=>speak(w.en));wordRoot.appendChild(el)});
+const questions=[
+{q:'ما معنى “Hello”؟',opts:['إلى اللقاء','مرحباً','شكراً','من فضلك'],a:1},
+{q:'كيف تقول “صباح الخير” بالإنجليزية؟',opts:['Good evening','Goodbye','Good morning','Good afternoon'],a:2},
+{q:'ما معنى “Thank you”؟',opts:['شكراً لك','اسمي هو','أهلاً','مساء الخير'],a:0},
+{q:'اختر العبارة التي تعني “إلى اللقاء”.',opts:['Please','Hello','Nice to meet you','Goodbye'],a:3},
+{q:'ما معنى “Please”؟',opts:['من فضلك','صباح الخير','مرحباً','سعيد بلقائك'],a:0},
+{q:'كيف تبدأ التعريف باسمك؟',opts:['Goodbye','My name is…','Thank you','Good evening'],a:1},
+{q:'ما معنى “Nice to meet you”؟',opts:['إلى اللقاء','من فضلك','سعيد بلقائك','صباح الخير'],a:2},
+{q:'أي عبارة مناسبة للتحية في المساء؟',opts:['Good morning','Good evening','Goodbye','Please'],a:1},
+{q:'“Hi” تعني:',opts:['أهلاً','شكراً','اسمي هو','مساء الخير'],a:0},
+{q:'أكمل: “Good _____” (بعد الظهر)',opts:['name','please','afternoon','thank'],a:2}
+];
+let order=[],idx=0,score=0,answered=false;
+const qEl=document.getElementById('question'),optsEl=document.getElementById('options'),feedback=document.getElementById('feedback'),next=document.getElementById('next'),counter=document.getElementById('counter'),progress=document.getElementById('progress'),quiz=document.getElementById('quiz'),result=document.getElementById('result');
+function shuffle(arr){return [...arr].sort(()=>Math.random()-.5)}
+function start(){order=shuffle(questions);idx=0;score=0;answered=false;quiz.hidden=false;result.hidden=true;render()}
+function render(){answered=false;const q=order[idx];counter.textContent='السؤال '+(idx+1)+' من '+order.length;progress.style.width=(idx/order.length*100)+'%';qEl.textContent=q.q;optsEl.innerHTML='';feedback.textContent='';feedback.className='feedback';next.disabled=true;next.textContent=idx===order.length-1?'عرض النتيجة':'السؤال التالي ←';q.opts.forEach((o,i)=>{const b=document.createElement('button');b.className='option';b.textContent=o;b.addEventListener('click',()=>answer(i));optsEl.appendChild(b)})}
+function answer(i){if(answered)return;answered=true;const q=order[idx];[...optsEl.children].forEach((b,n)=>{b.disabled=true;if(n===q.a)b.classList.add('correct');if(n===i&&i!==q.a)b.classList.add('wrong')});if(i===q.a){score++;feedback.textContent='أحسنت! إجابة صحيحة ✅';feedback.className='feedback good'}else{feedback.textContent='حاول مرة أخرى في السؤال القادم. الإجابة الصحيحة: '+q.opts[q.a];feedback.className='feedback bad'}next.disabled=false;progress.style.width=((idx+1)/order.length*100)+'%'}
+next.addEventListener('click',()=>{if(!answered)return;if(idx<order.length-1){idx++;render()}else showResult()});
+function showResult(){quiz.hidden=true;result.hidden=false;result.innerHTML='<div>انتهيت من الاختبار!</div><div class="score">'+score+' / '+order.length+'</div><p>'+(score>=8?'ممتاز! واصل التدرّب يومياً 🌟':score>=5?'جيد! راجع الكلمات وحاول مجدداً 👍':'لا بأس، استمع إلى الكلمات مرة أخرى ثم أعد الاختبار 💪')+'</p><button class="gold" id="again">إعادة الاختبار</button>';document.getElementById('again').addEventListener('click',start)}
+document.getElementById('restart').addEventListener('click',start);start();
+</script>
+</body>
+</html>
